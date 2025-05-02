@@ -1,0 +1,65 @@
+# Image Sources for Indie Game Developer Website
+
+## Background Images (Frutiger Aero Style)
+
+1. Blue Frutiger Aero Wallpaper
+   - URL: https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/07ac4730-10a5-494f-a7ba-bf9290179403/dh769p8-8425a0ca-7912-4d44-8cbd-3db872286b09.png
+   - Source: DeviantArt
+   - Attribution: N3ilNDM on DeviantArt
+   - License: Check with creator for specific usage rights
+
+2. Frutiger Aero Background
+   - URL: https://i.redd.it/z422brz0v48a1.png
+   - Source: Reddit
+   - License: Check with original creator for usage rights
+
+3. Windows Vista Aero Glass Effect
+   - URL: https://upload.wikimedia.org/wikipedia/en/d/df/Aero_Example.png
+   - Source: Wikipedia
+   - License: Fair use for educational purposes
+
+4. MSN Messenger 2005 Interface
+   - URL: https://www.webdesignmuseum.org/uploaded/fullscreen/2005/msn-messenger-2005.png
+   - Source: Web Design Museum
+   - License: For reference only, not for commercial use
+
+## Game Screenshots & Artwork
+
+1. Pixel Art Rural Landscape
+   - URL: https://img.freepik.com/free-vector/pixel-art-rural-landscape-background_52683-125379.jpg
+   - Source: Freepik
+   - License: Free with attribution to Freepik
+   - Attribution text: "Image by Freepik"
+
+2. Pixel Art Mystical Background
+   - URL: https://img.freepik.com/free-vector/pixel-art-mystical-background_52683-87349.jpg
+   - Source: Freepik
+   - License: Free with attribution to Freepik
+   - Attribution text: "Image by Freepik"
+
+3. 2D Platformer Game Screenshot
+   - URL: https://i.redd.it/some-screenshots-from-2d-platformer-game-ive-made-steam-v0-0rpgj6ys3yda1.png
+   - Source: Reddit
+   - License: Check with original creator for usage rights
+
+4. Indie RPG Game Screenshot
+   - URL: https://i.redd.it/how-do-these-screenshots-look-for-my-rpg-game-v0-zcrfbab6mykc1.png
+   - Source: Reddit
+   - License: Check with original creator for usage rights
+
+## Developer Portrait
+
+1. Indie Game Developer Portrait
+   - URL: https://images.squarespace-cdn.com/content/v1/5c368ddaaa49a1fd962acb3d/1633729534597-U4KUCZR91SPO568T6QDR/IMG_7704.JPG
+   - Source: Game Developer
+   - License: Check with original creator for usage rights
+
+## Note on Usage
+Before using any of these images in a production website, proper licensing must be secured. The images listed here are for reference purposes only. For a production website, consider:
+
+1. Using stock photos with appropriate licenses
+2. Creating custom artwork
+3. Using images with Creative Commons licenses with proper attribution
+4. Purchasing licenses for premium images
+
+For this project, these images are documented for reference but should be properly licensed before actual use.

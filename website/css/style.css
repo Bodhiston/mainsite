@@ -1,0 +1,459 @@
+/* 
+ * Pixel Dreams Studio - Frutiger Aero Style CSS
+ * Inspired by MSN Messenger 2005 and Windows Vista Aero
+ */
+
+/* ===== Base Styles & Variables ===== */
+:root {
+  /* MSN Messenger 2005 Color Palette */
+  --msn-blue: #2172B8; /* MSN Blue (primary brand color) */
+  --msn-dark-blue: #024E83; /* Darker blue (used for accents) */
+  --msn-light-blue: #85AFD3; /* Light blue (used for highlights) */
+  --msn-very-light-blue: #DFEAF3; /* Very light blue (background elements) */
+  --msn-orange: #EC731E; /* Orange (notification/alert color) */
+  --msn-green: #239D27; /* Green (online status indicator) */
+  --msn-red: #D44215; /* Red (close/alert buttons) */
+  --msn-coral: #D0918A; /* Soft pink/coral (decorative elements) */
+  
+  /* Windows Vista Aero Color Palette */
+  --aero-bright-blue: #0F79CF; /* Bright blue (primary accent) */
+  --aero-medium-blue: #1768A8; /* Medium blue (secondary accent) */
+  --aero-dark-blue: #164B75; /* Dark blue (shadows and depth) */
+  --aero-mid-blue: #4895D0; /* Mid-tone blue (gradients) */
+  --aero-light-blue: #86ACCE; /* Light blue (highlights) */
+  --aero-white: #FBFBFC; /* Near white (text and highlights) */
+  --aero-light-bg: #EAF2FB; /* Very light blue (background elements) */
+  --aero-blue-gray: #D8E2EF; /* Light blue-gray (secondary backgrounds) */
+  --aero-border: #AFC3D7; /* Soft blue-gray (borders and separators) */
+  --aero-shadow: #847A85; /* Muted purple-gray (shadows and accents) */
+  
+  /* Text colors */
+  --text-dark: #09010E; /* Near black (text color) */
+  --text-light: #FFFFFF; /* White (primary text and background) */
+  
+  /* Spacing */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  
+  /* Border radius */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+}
+
+/* ===== Global Reset & Typography ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: var(--text-dark);
+  background-image: url('../images/background/blue-frutiger-aero-wallpaper.png');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  line-height: 1.6;
+  padding: var(--space-md);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  margin-bottom: var(--space-md);
+  color: var(--msn-dark-blue); /* Using MSN dark blue color */
+}
+
+h1 {
+  font-size: 2.2rem;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.7);
+}
+
+h2 {
+  font-size: 1.8rem;
+  position: relative;
+  padding-bottom: var(--space-sm);
+}
+
+h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, var(--msn-blue), var(--msn-light-blue), transparent);
+}
+
+h3 {
+  font-size: 1.4rem;
+  color: var(--aero-medium-blue); /* Using Aero medium blue color */
+}
+
+p {
+  margin-bottom: var(--space-md);
+}
+
+a {
+  color: var(--msn-blue); /* Using MSN blue color */
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--aero-bright-blue); /* Using Aero bright blue color */
+  text-decoration: underline;
+}
+
+/* ===== Main Container ===== */
+.aero-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.1),
+    0 0 0 1px rgba(255, 255, 255, 0.4) inset;
+}
+
+/* ===== Header Styles ===== */
+.aero-header {
+  background: linear-gradient(135deg, var(--aero-medium-blue), var(--aero-bright-blue)); /* Blue gradient background */
+  color: var(--text-light);
+  padding: var(--space-lg);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.aero-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0));
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+}
+
+.logo-container {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: var(--space-md) 0;
+}
+
+.tagline {
+  font-style: italic;
+  color: var(--aero-light-bg); /* Using Aero light background color */
+  margin-top: -10px;
+  font-size: 1.1rem;
+}
+
+/* ===== Navigation ===== */
+.aero-nav {
+  margin-top: var(--space-lg);
+  position: relative;
+  z-index: 1;
+}
+
+.aero-nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: var(--space-md);
+}
+
+.aero-nav li a {
+  display: block;
+  padding: var(--space-sm) var(--space-lg);
+  color: var(--text-light);
+  text-decoration: none;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1));
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 
+    0 1px 3px rgba(0, 0, 0, 0.1),
+    0 1px 0 rgba(255, 255, 255, 0.4) inset;
+  transition: all 0.2s ease;
+  font-weight: 600;
+}
+
+.aero-nav li a:hover {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.2));
+  transform: translateY(-2px);
+  box-shadow: 
+    0 3px 6px rgba(0, 0, 0, 0.15),
+    0 1px 0 rgba(255, 255, 255, 0.4) inset;
+}
+
+.aero-nav li a:active {
+  transform: translateY(0);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.3));
+  box-shadow: 
+    0 1px 2px rgba(0, 0, 0, 0.1) inset,
+    0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+/* ===== Main Content Sections ===== */
+main {
+  padding: var(--space-lg);
+}
+
+.aero-section {
+  margin-bottom: var(--space-xl);
+}
+
+.aero-panel {
+  background-color: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  box-shadow: 
+    0 4px 16px rgba(0, 0, 0, 0.08),
+    0 0 0 1px rgba(255, 255, 255, 0.6) inset,
+    0 1px 0 rgba(255, 255, 255, 0.6) inset;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--aero-border); /* Using Aero border color */
+}
+
+.aero-panel::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 30%;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  pointer-events: none;
+}
+
+/* ===== About Section ===== */
+.about-content {
+  display: flex;
+  gap: var(--space-lg);
+  align-items: center;
+}
+
+.profile-image {
+  flex: 0 0 200px;
+}
+
+.profile-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  border: 4px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.about-text {
+  flex: 1;
+}
+
+/* ===== Games Section ===== */
+.games-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-lg);
+}
+
+.game-card {
+  background: linear-gradient(to bottom, var(--aero-light-bg), var(--aero-blue-gray)); /* Blue gradient background */
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: 
+    0 4px 12px rgba(0, 0, 0, 0.1),
+    0 0 0 1px rgba(255, 255, 255, 0.5) inset;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: 1px solid var(--msn-light-blue); /* Using MSN light blue color */
+}
+
+.game-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 
+    0 8px 24px rgba(0, 0, 0, 0.15),
+    0 0 0 1px rgba(255, 255, 255, 0.5) inset;
+}
+
+.game-image {
+  height: 200px;
+  overflow: hidden;
+}
+
+.game-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.game-card:hover .game-image img {
+  transform: scale(1.05);
+}
+
+.game-info {
+  padding: var(--space-md);
+}
+
+.game-type {
+  color: var(--msn-blue); /* Using MSN blue color */
+  font-weight: 600;
+  margin-top: -10px;
+  margin-bottom: var(--space-sm);
+}
+
+.game-meta {
+  display: flex;
+  justify-content: space-between;
+  margin-top: var(--space-md);
+  font-size: 0.9rem;
+  color: var(--aero-dark-blue); /* Using Aero dark blue color */
+}
+
+/* ===== Current Projects Section ===== */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-lg);
+}
+
+.project-card {
+  background: linear-gradient(135deg, var(--aero-light-bg), var(--msn-very-light-blue)); /* Blue gradient background */
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+  box-shadow: 
+    0 4px 12px rgba(0, 0, 0, 0.08),
+    0 0 0 1px rgba(255, 255, 255, 0.5) inset;
+  border: 1px solid var(--aero-border); /* Using Aero border color */
+}
+
+.project-type {
+  color: var(--msn-blue); /* Using MSN blue color */
+  font-weight: 600;
+  margin-bottom: var(--space-sm);
+}
+
+.project-image {
+  height: 180px;
+  margin: var(--space-sm) 0;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-meta {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  margin-top: var(--space-md);
+  font-size: 0.9rem;
+  color: var(--aero-dark-blue); /* Using Aero dark blue color */
+}
+
+/* ===== Future Projects Section ===== */
+.future-projects-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-lg);
+}
+
+.future-project {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.3));
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+  border: 1px solid var(--msn-light-blue); /* Using MSN light blue color */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+}
+
+.future-project h3 {
+  color: var(--msn-dark-blue); /* Using MSN dark blue color */
+}
+
+/* ===== Footer ===== */
+.aero-footer {
+  background: linear-gradient(to bottom, var(--aero-medium-blue), var(--aero-dark-blue)); /* Blue gradient background */
+  color: var(--text-light);
+  padding: var(--space-lg);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.aero-footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.footer-content {
+  position: relative;
+  z-index: 1;
+}
+
+.footer-note {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  margin-top: var(--space-sm);
+}
+
+/* ===== Responsive Adjustments ===== */
+@media (max-width: 768px) {
+  .aero-nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .games-grid,
+  .projects-grid,
+  .future-projects-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: var(--space-sm);
+  }
+  
+  .aero-header,
+  .aero-panel,
+  .aero-footer {
+    padding: var(--space-md);
+  }
+  
+  h1 {
+    font-size: 1.8rem;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+  }
+}

@@ -1,0 +1,57 @@
+# Image Credits
+
+This file contains attribution information for all images used in the website.
+
+## Background Images
+
+### Frutiger Aero Background
+- Filename: frutiger-aero-background.png
+- Source: Reddit
+- License: Check with original creator for usage rights
+
+### Vista Aero Glass
+- Filename: vista-aero-glass.png
+- Source: Wikipedia
+- License: Fair use for educational purposes
+
+### MSN Messenger Interface
+- Filename: msn-messenger-interface.png
+- Source: Web Design Museum
+- License: For reference only, not for commercial use
+
+### Blue Frutiger Aero Wallpaper
+- Filename: blue-frutiger-aero-wallpaper.png
+- Source: Reddit
+- Attribution: Reddit user
+- License: Check with original creator for usage rights
+
+## Content Images
+
+### Pixel Art Rural Landscape
+- Filename: pixel-art-rural-landscape.jpg
+- Source: Freepik
+- License: Free with attribution to Freepik
+- Attribution text: "Image by Freepik"
+
+### Pixel Art Mystical Background
+- Filename: pixel-art-mystical-background.jpg
+- Source: Freepik
+- License: Free with attribution to Freepik
+- Attribution text: "Image by Freepik"
+
+### Developer Portrait
+- Filename: developer-portrait.jpg
+- Source: Game Developer
+- License: Check with original creator for usage rights
+
+### 2D Platformer Game Screenshot
+- Filename: 2d-platformer-game-screenshot.png
+- Source: Reddit
+- Attribution: Reddit user
+- License: Check with original creator for usage rights
+
+### Indie RPG Game Screenshot
+- Filename: indie-rpg-game-screenshot.png
+- Source: Reddit
+- Attribution: Reddit user
+- License: Check with original creator for usage rights
