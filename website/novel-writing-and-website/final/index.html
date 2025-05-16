@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sci-Fi Novel Writing Schedule</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header Section -->
+        <header class="app-header">
+            <div class="header-glass">
+                <h1>Sci-Fi Novel Writing Schedule</h1>
+                <div class="date-display">June 1, 2025 - November 27, 2025</div>
+            </div>
+        </header>
+
+        <!-- Main Navigation -->
+        <nav class="main-nav">
+            <ul class="nav-tabs">
+                <li class="nav-tab active" data-view="dashboard">Dashboard</li>
+                <li class="nav-tab" data-view="daily">Daily View</li>
+                <li class="nav-tab" data-view="weekly">Weekly View</li>
+                <li class="nav-tab" data-view="monthly">Monthly View</li>
+                <li class="nav-tab" data-view="publishing">Publishing</li>
+            </ul>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- Dashboard View -->
+            <section id="dashboard" class="view active">
+                <div class="glass-panel">
+                    <h2>Project Overview</h2>
+                    <div class="progress-container">
+                        <div class="progress-label">Overall Progress</div>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar" id="overall-progress-bar"></div>
+                        </div>
+                        <div class="progress-percentage" id="overall-progress-percentage">0%</div>
+                    </div>
+                    
+                    <div class="word-count-container">
+                        <div class="word-count-label">Word Count</div>
+                        <div class="word-count-display">
+                            <span id="current-word-count">0</span> / <span id="target-word-count">80,000</span>
+                        </div>
+                    </div>
+                    
+                    <div class="current-phase-container">
+                        <h3>Current Phase</h3>
+                        <div class="current-phase" id="current-phase-display">Pre-Writing/Preparation Phase</div>
+                    </div>
+                </div>
+                
+                <div class="glass-panel">
+                    <h2>Upcoming Milestones</h2>
+                    <ul class="milestone-list" id="milestone-list">
+                        <!-- Milestones will be populated by JavaScript -->
+                    </ul>
+                </div>
+                
+                <div class="glass-panel">
+                    <h2>Today's Tasks</h2>
+                    <ul class="task-list" id="today-task-list">
+                        <!-- Tasks will be populated by JavaScript -->
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Daily View -->
+            <section id="daily" class="view">
+                <div class="glass-panel">
+                    <div class="view-header">
+                        <h2>Daily Schedule</h2>
+                        <div class="date-navigation">
+                            <button class="glossy-button" id="prev-day">Previous Day</button>
+                            <div class="current-date" id="current-day-display">June 1, 2025</div>
+                            <button class="glossy-button" id="next-day">Next Day</button>
+                        </div>
+                    </div>
+                    
+                    <div class="daily-details">
+                        <div class="daily-phase">
+                            <h3>Phase</h3>
+                            <div id="daily-phase-display"></div>
+                        </div>
+                        
+                        <div class="daily-tasks">
+                            <h3>Tasks</h3>
+                            <ul id="daily-tasks-list" class="daily-tasks-list">
+                                <!-- Tasks will be populated by JavaScript -->
+                            </ul>
+                        </div>
+                        
+                        <div class="daily-progress">
+                            <h3>Progress</h3>
+                            <div class="word-count-input">
+                                <label for="daily-word-count">Word Count:</label>
+                                <input type="number" id="daily-word-count" min="0">
+                                <button class="glossy-button small" id="save-word-count">Save</button>
+                            </div>
+                            
+                            <div class="task-completion">
+                                <label>
+                                    <input type="checkbox" id="daily-completed">
+                                    Mark Day as Complete
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="daily-notes">
+                            <h3>Notes</h3>
+                            <textarea id="daily-notes-input" placeholder="Add notes for this day..."></textarea>
+                            <button class="glossy-button small" id="save-notes">Save Notes</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Weekly View -->
+            <section id="weekly" class="view">
+                <div class="glass-panel">
+                    <div class="view-header">
+                        <h2>Weekly Schedule</h2>
+                        <div class="date-navigation">
+                            <button class="glossy-button" id="prev-week">Previous Week</button>
+                            <div class="current-date" id="current-week-display">Week 1: June 1 - June 7, 2025</div>
+                            <button class="glossy-button" id="next-week">Next Week</button>
+                        </div>
+                    </div>
+                    
+                    <div class="weekly-details">
+                        <div class="weekly-phases">
+                            <h3>Phases</h3>
+                            <div id="weekly-phases-display"></div>
+                        </div>
+                        
+                        <div class="weekly-goals">
+                            <h3>Weekly Goals</h3>
+                            <ul id="weekly-goals-list">
+                                <!-- Goals will be populated by JavaScript -->
+                            </ul>
+                        </div>
+                        
+                        <div class="weekly-progress">
+                            <h3>Progress</h3>
+                            <div class="progress-container">
+                                <div class="progress-label">Week Completion</div>
+                                <div class="progress-bar-container">
+                                    <div class="progress-bar" id="weekly-progress-bar"></div>
+                                </div>
+                                <div class="progress-percentage" id="weekly-progress-percentage">0%</div>
+                            </div>
+                            
+                            <div class="word-count-display">
+                                <span>Total Word Count This Week:</span>
+                                <span id="weekly-word-count">0</span>
+                            </div>
+                        </div>
+                        
+                        <div class="weekly-notes">
+                            <h3>Notes</h3>
+                            <textarea id="weekly-notes-input" placeholder="Add notes for this week..."></textarea>
+                            <button class="glossy-button small" id="save-weekly-notes">Save Notes</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="glass-panel">
+                    <h3>Daily Breakdown</h3>
+                    <div class="weekly-calendar" id="weekly-calendar">
+                        <!-- Calendar will be populated by JavaScript -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Monthly View -->
+            <section id="monthly" class="view">
+                <div class="glass-panel">
+                    <div class="view-header">
+                        <h2>Monthly Schedule</h2>
+                        <div class="date-navigation">
+                            <button class="glossy-button" id="prev-month">Previous Month</button>
+                            <div class="current-date" id="current-month-display">June 2025</div>
+                            <button class="glossy-button" id="next-month">Next Month</button>
+                        </div>
+                    </div>
+                    
+                    <div class="monthly-details">
+                        <div class="monthly-phases">
+                            <h3>Phases</h3>
+                            <div id="monthly-phases-display"></div>
+                        </div>
+                        
+                        <div class="monthly-goals">
+                            <h3>Major Goals</h3>
+                            <ul id="monthly-goals-list">
+                                <!-- Goals will be populated by JavaScript -->
+                            </ul>
+                        </div>
+                        
+                        <div class="monthly-progress">
+                            <h3>Progress</h3>
+                            <div class="progress-container">
+                                <div class="progress-label">Month Completion</div>
+                                <div class="progress-bar-container">
+                                    <div class="progress-bar" id="monthly-progress-bar"></div>
+                                </div>
+                                <div class="progress-percentage" id="monthly-progress-percentage">0%</div>
+                            </div>
+                            
+                            <div class="word-count-display">
+                                <span>Total Word Count This Month:</span>
+                                <span id="monthly-word-count">0</span>
+                            </div>
+                        </div>
+                        
+                        <div class="monthly-notes">
+                            <h3>Notes</h3>
+                            <textarea id="monthly-notes-input" placeholder="Add notes for this month..."></textarea>
+                            <button class="glossy-button small" id="save-monthly-notes">Save Notes</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="glass-panel">
+                    <h3>Calendar View</h3>
+                    <div class="monthly-calendar" id="monthly-calendar">
+                        <!-- Calendar will be populated by JavaScript -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Publishing Options View -->
+            <section id="publishing" class="view">
+                <div class="glass-panel">
+                    <h2>Publishing Options</h2>
+                    <p class="publishing-intro">Select and prepare for your preferred publishing path:</p>
+                    
+                    <div class="publishing-options">
+                        <div class="publishing-option" data-option="traditional">
+                            <div class="option-header">
+                                <h3>Traditional Publishing</h3>
+                                <label class="option-select">
+                                    <input type="radio" name="publishing-option" value="traditional">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                            <div class="option-content">
+                                <p>Work with established publishers through literary agents.</p>
+                                <ul>
+                                    <li>Prepare query letter</li>
+                                    <li>Research literary agents</li>
+                                    <li>Submit to agents</li>
+                                    <li>Follow up on submissions</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="publishing-option" data-option="self">
+                            <div class="option-header">
+                                <h3>Self-Publishing</h3>
+                                <label class="option-select">
+                                    <input type="radio" name="publishing-option" value="self">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                            <div class="option-content">
+                                <p>Take full control of the publishing process.</p>
+                                <ul>
+                                    <li>Format manuscript for e-book and print</li>
+                                    <li>Design or commission cover art</li>
+                                    <li>Set up accounts on publishing platforms</li>
+                                    <li>Upload and publish</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="publishing-option" data-option="hybrid">
+                            <div class="option-header">
+                                <h3>Hybrid Publishing</h3>
+                                <label class="option-select">
+                                    <input type="radio" name="publishing-option" value="hybrid">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                            <div class="option-content">
+                                <p>Combine elements of traditional and self-publishing.</p>
+                                <ul>
+                                    <li>Research hybrid publishers</li>
+                                    <li>Submit manuscript to selected publishers</li>
+                                    <li>Review contract terms</li>
+                                    <li>Proceed with publication process</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="publishing-checklist">
+                        <h3>Publication Checklist</h3>
+                        <div class="checklist-items" id="publishing-checklist-items">
+                            <!-- Checklist will be populated based on selected option -->
+                            <p class="checklist-placeholder">Select a publishing option to see the checklist</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="app-footer">
+            <div class="footer-glass">
+                <p>Sci-Fi Novel Writing Schedule | June 1, 2025 - November 27, 2025 (Thanksgiving)</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/app.js"></script>
+</body>
+</html>

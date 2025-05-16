@@ -1,0 +1,244 @@
+/**
+ * Sci-Fi Novel Writing Schedule
+ * Interactive Elements CSS for Frutiger Aero Theme
+ */
+
+/* ===== Interactive Elements ===== */
+
+/* Task list interactivity */
+.task-list li, .daily-tasks-list li {
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.task-list li:hover, .daily-tasks-list li:hover {
+  background: rgba(255, 255, 255, 0.5);
+  transform: translateY(-2px);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.task-list li.selected, .daily-tasks-list li.selected {
+  background: rgba(0, 120, 215, 0.2);
+  border: 1px solid rgba(0, 120, 215, 0.3);
+}
+
+/* Task header and toggle */
+.task-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task-toggle {
+  cursor: pointer;
+  color: var(--primary-blue);
+  font-size: 12px;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  transition: all 0.2s ease;
+}
+
+.task-toggle:hover {
+  background: rgba(0, 120, 215, 0.2);
+}
+
+/* Subtasks styling */
+.subtasks-container {
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+.subtasks-list li {
+  padding: 5px;
+  margin-bottom: 5px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.subtasks-list label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.subtasks-list input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+}
+
+/* Calendar day highlighting */
+.calendar-day, .month-day:not(.empty) {
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.calendar-day:hover, .month-day:not(.empty):hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.calendar-day.highlighted, .month-day.highlighted {
+  border: 2px solid var(--primary-blue);
+  box-shadow: 0 0 8px rgba(0, 120, 215, 0.5);
+}
+
+.calendar-day.current-day, .month-day.current-day {
+  border: 2px solid var(--accent-green);
+  background: rgba(127, 186, 0, 0.1);
+}
+
+/* Day progress bar */
+.day-progress-container {
+  height: 4px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 2px;
+  overflow: hidden;
+  margin-top: 5px;
+}
+
+.day-progress-bar {
+  height: 100%;
+  background: linear-gradient(to right, var(--accent-green), var(--light-green));
+  border-radius: 2px;
+  width: 0%;
+}
+
+.month-progress-bar {
+  height: 3px;
+  background: linear-gradient(to right, var(--accent-green), var(--light-green));
+  border-radius: 2px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+/* Word count input styling */
+.word-count-input input.has-value {
+  border-color: var(--accent-green);
+  background-color: rgba(127, 186, 0, 0.1);
+}
+
+/* Task completion styling */
+.task-completion.completed label {
+  color: var(--accent-green);
+  font-weight: 600;
+}
+
+/* Milestone styling */
+.daily-milestone {
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  margin-top: 15px;
+  position: relative;
+  overflow: hidden;
+}
+
+.daily-milestone::before {
+  content: '★';
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  color: var(--accent-green);
+  opacity: 0.5;
+}
+
+.milestone-text {
+  font-weight: 600;
+  color: var(--dark-blue);
+}
+
+.milestone-date {
+  font-size: 14px;
+  color: var(--primary-blue);
+  margin-bottom: 5px;
+}
+
+.milestone-countdown {
+  font-size: 12px;
+  color: var(--accent-green);
+  margin-top: 5px;
+  font-weight: 600;
+}
+
+.day-milestone, .month-milestone {
+  color: var(--accent-green);
+  font-size: 16px;
+}
+
+/* Publishing options styling */
+.publishing-option.selected {
+  background: rgba(0, 120, 215, 0.1);
+  border: 1px solid rgba(0, 120, 215, 0.3);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.checklist-item {
+  padding: 8px;
+  margin-bottom: 8px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  transition: all 0.2s ease;
+}
+
+.checklist-item:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.checklist-item.completed {
+  background: rgba(127, 186, 0, 0.1);
+  border: 1px solid rgba(127, 186, 0, 0.3);
+}
+
+.checklist-item label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+/* Animation classes */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.pulse {
+  animation: pulse 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  animation: fadeIn 0.3s ease forwards;
+}
+
+/* View transitions */
+.view {
+  transition: opacity 0.3s ease;
+}
+
+/* Responsive adjustments for interactive elements */
+@media (max-width: 768px) {
+  .subtasks-container {
+    padding-left: 10px;
+  }
+  
+  .daily-milestone::before {
+    display: none;
+  }
+}
